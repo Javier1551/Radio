@@ -1,31 +1,106 @@
-<div class="container">
-    <h1>Radio Cristiana y Reproductor de Música</h1>
-    
-    <!-- Radio Cristiana -->
-    <div class="player">
-        <h2>Radio Cristiana en Vivo</h2>
-        <audio controls>
-            <source src="URL_DE_TU_RADIO" type="audio/mpeg">
-            Tu navegador no soporta el elemento de audio.
-        </audio>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Cristiana y Reproductor de Música</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #4a4a8f;
+            text-align: center;
+        }
+        .player {
+            background-color: #e6e6fa;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .player h2 {
+            color: #4a4a8f;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .controls button {
+            background-color: #4a4a8f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .playlist {
+            list-style-type: none;
+            padding: 0;
+        }
+        .playlist li {
+            background-color: #f0f0f0;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Radio Cristiana y Reproductor de Música</h1>
+        
+        <div class="player">
+            <h2>Radio Cristiana en Vivo</h2>
+            <audio controls>
+                <source src="URL_DE_TU_RADIO" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+        <div class="player">
+            <h2>Reproductor de Música</h2>
+            <audio id="audio-player" controls>
+                <source src="" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <div class="controls">
+                <button onclick="prevSong()">Anterior</button>
+                <button onclick="nextSong()">Siguiente</button>
+            </div>
+            <h3>Lista de Reproducción</h3>
+            <ul class="playlist">
+                <li onclick="playSong('cancion1.mp3')">Canción Cristiana 1</li>
+                <li onclick="playSong('cancion2.mp3')">Canción Cristiana 2</li>
+                <li onclick="playSong('cancion3.mp3')">Canción Cristiana 3</li>
+            </ul>
+        </div>
     </div>
 
-    <!-- Reproductor de Música -->
-    <div class="player">
-        <h2>Reproductor de Música</h2>
-        <audio id="audio-player" controls>
-            <source src="" type="audio/mpeg">
-            Tu navegador no soporta el elemento de audio.
-        </audio>
-        <div class="controls">
-            <button onclick="prevSong()">Anterior</button>
-            <button onclick="nextSong()">Siguiente</button>
-        </div>
-        <h3>Lista de Reproducción</h3>
-        <ul class="playlist">
-            <li onclick="playSong('cancion1.mp3')">Canción Cristiana 1</li>
-            <li onclick="playSong('cancion2.mp3')">Canción Cristiana 2</li>
-            <li onclick="playSong('cancion3.mp3')">Canción Cristiana 3</li>
-        </ul>
-    </div>
-</div>
+    <script>
+        // Aquí iría el código JavaScript para controlar el reproductor
+        function playSong(url) {
+            // Lógica para reproducir la canción
+        }
+        function prevSong() {
+            // Lógica para ir a la canción anterior
+        }
+        function nextSong() {
+            // Lógica para ir a la siguiente canción
+        }
+    </script>
+</body>
+</html>
